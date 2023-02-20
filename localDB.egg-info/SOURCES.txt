@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+localDB.egg-info/PKG-INFO
+localDB.egg-info/SOURCES.txt
+localDB.egg-info/dependency_links.txt
+localDB.egg-info/top_level.txt
+localDataBase/__init__.py
+localDataBase/localDB.py

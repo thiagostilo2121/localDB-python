@@ -1,0 +1,18 @@
+[project]
+name = "localDataBase"
+version = "0.1.22"
+authors = [
+  { name="Thiago Stilo", email="stilothiagovalentin@gmail.com" },
+]
+description = "localDB is a Python package that allows you to generate a local database in the file system. With localDB, users can create, update, delete, and search a local database on their system. This package can be useful for applications that reire a simple and efficient local data storage solution. Additionally, being a local database solution, it does not require an internet connection or depend on external services."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/thiagostilo2121/localDB-python"
+"Bug Tracker" = "https://github.com/thiagostilo2121/localDB-python/issues"
