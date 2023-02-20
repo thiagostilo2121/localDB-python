@@ -29,6 +29,9 @@ Example:
 ```localdb.createChase("dataName", "chaseName", "content", "editType")```
 
 
+## Install
+```pip install localDataBase```
+
 These methods can be useful for managing and updating text files within a local data folder in a Python application.
 ## Authors
 
