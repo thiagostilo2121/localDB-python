@@ -10,6 +10,7 @@ Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.9
 Description-Content-Type: text/markdown
+License-File: LICENSE
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -41,8 +42,11 @@ Example:
 Example:
 ```localdb.createChase("dataName", "chaseName", "content", "editType")```
 
-
 These methods can be useful for managing and updating text files within a local data folder in a Python application.
+
+## Install
+```pip install localDataBase```
+
 ## Authors
 
 - [@thiagostilo2121](https://www.github.com/thiagostilo2121)

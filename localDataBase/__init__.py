@@ -22,11 +22,15 @@ LocalDB
 
   | setChase    / 🟢 |
 
-  | findChase   / ⭕ |
+  | findChase   / 🟢 |
+
+  | removeChase / 🟢 |
+
+  | readChase  /  🟢 |
 
 Information
 -----------
-Version: 0.1.22[ALPHA]
+Version: 0.1.3
 Developer: Thiago Stilo
 GitHub: github.com/thiagostilo2121
 
@@ -38,7 +42,12 @@ __all__= [
     "findData",
     "createChase",
     "setChase",
+    "findChase",
+    "removeChase",
+    "readChase"
 ]
+
+dataFolderError_1 = "The DataFolder dosen't exists"
 
 class folderData:
 
@@ -67,7 +76,7 @@ class folderData:
          """
          import os 
          if os.path.exists(f"{name}") == False:
-             raise TypeError("The folder dosen't exists")
+             raise TypeError(dataFolderError_1)
              return
          _D = os.remove(f"{name}")
          return _D
@@ -91,7 +100,7 @@ class chases():
      def __init__(self) -> None: ...
      def createChase(self, name: str, chase: str) -> object:
          if findData(f"{name}") == False:
-             raise TypeError("The DataFolder dosen't exists")
+             raise TypeError(dataFolderError_1)
              return
          with open(f"{name}/{chase}.txt", "a") as local:
              local.write("")
@@ -104,13 +113,46 @@ class chases():
              raise TypeError(f"Edit Type: {edit} has not supported! only 'a' or 'w'")
              return
          if findData(name) == False:
-             raise TypeError("The DataFolder dosen't exists")
+             raise TypeError(dataFolderError_1)
+             return
+         if findData(f"{name}/{chase}.txt") == False:
+             raise TypeError("The Chase dosen't exists")
              return
          with open(f"{name}/{chase}.txt", edit) as local:
              rt = local.write(__newContent)
              return rt
 
-                          
+     def findChase(self, name: str, chase: str) -> bool:
+         import os
+         if findData(f"{name}") == False:
+             raise TypeError(dataFolderError_1)
+             return
+         if findData(f"{name}/{chase}.txt") == False:
+             _GHd = False
+             return _GHd
+         elif findData(f"{name}/{chase}.txt") == True:
+             _GHd = True
+             return _GHd
+     def removeChase(self, name: str, chase: str) -> object: 
+         if findData(f"{name}") == False:
+             raise TypeError(dataFolderError_1)
+             return
+         if findData(f"{name}/{chase}.txt") == False:
+             raise TypeError("The Chase dosen't exists")
+             return
+         import os 
+         os.remove(f"{name}/{chase}.txt")        
+     def readChase(self, name: str, chase: str) -> str:
+         if findData(f"{name}") == False:
+             raise TypeError(dataFolderError_1)
+             return
+         if findData(f"{name}/{chase}.txt") == False:
+             raise TypeError("The Chase dosen't exists")
+             return
+         import os
+         with open(f"{name}/{chase}.txt", "r") as local:
+             _READs = local.read()    
+             return _READs                      
          
 _inst = folderData()
 createData = _inst.createData
@@ -119,3 +161,6 @@ findData = _inst.findData
 _chst = chases()
 createChase = _chst.createChase
 setChase = _chst.setChase
+findChase = _chst.findChase
+removeChase = _chst.removeChase
+readChase = _chst.readChase

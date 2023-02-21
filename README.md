@@ -9,13 +9,13 @@
 
 ## FolderData
 
-- createData(self, name: str) -> object:
+- `createData`:
    This method creates a new directory with the given name. It first checks whether a directory with the same name already exists or not. If it exists, then it raises an error message and returns None. Otherwise, it creates the new directory and returns the directory object. A message is printed to confirm that the directory has been created.
 
-- removeData(self, name: str) -> object:
+- `removeData`:
    This method removes the directory with the given name. It first checks whether the directory exists or not. If it doesn't exist, it raises an error message and returns None. Otherwise, it removes the directory and returns the directory object.
 
-- findData(self, name: str) -> bool:
+- `findData`:
   This method checks whether a directory with the given name exists or not. It returns a boolean value of True if the directory exists, and False if it doesn't exist.
 
 ## Chases
@@ -27,6 +27,9 @@ Example:
 - The  `setChase` method takes four arguments, name, chase, __newContent, and edit. It checks if the edit argument is either "a" or "w". If it is not, it raises a TypeError. It also checks if the data folder with the given name exists. If it does not exist, it raises a TypeError. Then, it opens the text file with the given name in the data folder with the appropriate editing mode. It writes the new content to the file and returns the number of characters written.
 Example:
 ```localdb.createChase("dataName", "chaseName", "content", "editType")```
+
+### More Chases functions:
+`findChase`, `removeChase`, `readChase`
 
 These methods can be useful for managing and updating text files within a local data folder in a Python application.
 

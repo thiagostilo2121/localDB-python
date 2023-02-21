@@ -1,3 +1,4 @@
+LICENSE
 README.md
 pyproject.toml
 localDataBase/__init__.py
