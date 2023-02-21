@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: localDataBase
-Version: 0.1.3
+Version: 0.1.30
 Summary: localDB is a Python package that allows you to generate a local database in the file system. With localDB, users can create, update, delete, and search a local database on their system. This package can be useful for applications that reire a simple and efficient local data storage solution. Additionally, being a local database solution, it does not require an internet connection or depend on external services.
 Author-email: Thiago Stilo <stilothiagovalentin@gmail.com>
 Project-URL: Homepage, https://github.com/thiagostilo2121/localDB-python
